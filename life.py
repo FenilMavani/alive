@@ -7,7 +7,7 @@ def calculate_time_alive(birth_datetime):
     now = datetime.now()
     time_alive = now - birth_datetime
     weeks_alive = time_alive.days // 7
-    days_alive = time_alive.days
+    days_alive = time_alive.days % 7
     hours_alive = int(time_alive.total_seconds() // 3600)
     minutes_alive = int(time_alive.total_seconds() // 60)
     seconds_alive = int(time_alive.total_seconds())
